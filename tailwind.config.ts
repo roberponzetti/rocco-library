@@ -5,9 +5,17 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/flowbite-react/lib/**/*.js",
   ],
   theme: {
     extend: {
+      colors: {
+        'light-background-color': '#F9E0BB',
+        'dark-yellow': '#FFC26F',
+        'dark-orange': '#C38154',
+        'dark-brown': '#884A39',
+        'dark-brown-hover': '#723e30',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +23,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 export default config
